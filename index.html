@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 5</title>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="main-content">
+                <div class="block form-block">
+                    <form>
+                        <h1 class="form-title">Форма:</h1>
+                        <div class="f-element">
+                            <label class="f-e-title">ПІБ:</label>
+                            <input class="f-e-input" id="nameInput" type="text" placeholder="Введіть ваш ПІБ"/>
+                            <span class="f-e-error" id="nameError">Error</span>
+                        </div>
+
+                        <div class="f-element">
+                            <label class="f-e-title">Номер Телефону:</label>
+                            <input class="f-e-input" id="numberInput" type="tel" pattern="\([0-9]{3}\)-[0-9]{2}-[0-9]{2}" placeholder="(XXX)-XX-XX">
+                            <span class="f-e-error" id="numberError">Error</span>
+                        </div>
+
+                        <div class="f-element">
+                            <label class="f-e-title">ID-card:</label>
+                            <input class="f-e-input" id="cardInput" type="text" placeholder="ТТ №ЧЧЧЧЧЧ">
+                            <span class="f-e-error" id="cardError">Error</span>
+                        </div>
+
+                        <div class="f-element">
+                            <label class="f-e-title">Факультет:</label>
+                            <input class="f-e-input" id="facultyInput" type="text" placeholder="Введіть назву Факультету">
+                            <span class="f-e-error" id="facultyError">Error</span>
+                        </div>
+
+                        <div class="f-element">
+                            <label class="f-e-title">Дата народження:</label>
+                            <input class="f-e-input" id="dateInput" type="date">
+                            <span class="f-e-error" id="dateError">Error</span>
+                        </div>
+
+                        <button class="btn btn-submit" id="submit">Відправити Форму</button>
+                        <span class="f-e-error" id="generalError">.</span>
+                    </form>
+                </div>
+
+                <div class="block result-block">
+                    <h1 class="form-title">Результат:</h1>
+                    <p style="text-align: center;" id="message">Заповність спочатку форму!</p>
+                    <div class="result-content">
+                        <div class="r-info">
+                            <p>Ім'я:</p>
+                            <label id="setName"></label>
+                        </div>
+                        <div class="r-info">
+                            <p>Номер телефону:</p>
+                            <label id="setNumber"></label>
+                        </div>
+                        <div class="r-info">
+                            <p>ID-Card:</p>
+                            <label id="setCard"></label>
+                        </div>
+                        <div class="r-info">
+                            <p>Факультет:</p>
+                            <label id="setFaculty"></label>
+                        </div>
+                        <div class="r-info">
+                            <p>Дата народження:</p>
+                            <label id="setDate"></label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="margin-top: 50px" class="main-content">
+                <div class="block block-array">
+                    <table id="table">
+                        <tbody>
+                        <!-- Генерация ячеек таблицы с числами от 1 до 36 -->
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>32</td>
+                            <td>33</td>
+                            <td>34</td>
+                            <td>35</td>
+                            <td>36</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="array.js"></script>
+</body>
+</html>
