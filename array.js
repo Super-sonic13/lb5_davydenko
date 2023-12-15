@@ -58,20 +58,20 @@ function handleDoubleClick(event) {
 }
 
 function getRandomColor() {
-    const r = Math.floor(Math.random() * 256); // Випадкове значення від 0 до 255 для червоного
-    const g = Math.floor(Math.random() * 256); // Випадкове значення від 0 до 255 для зеленого
-    const b = Math.floor(Math.random() * 256); // Випадкове значення від 0 до 255 для синього
-    return `rgb(${r}, ${g}, ${b})`; // Створення рядка кольору у форматі RGB
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256); 
+    const b = Math.floor(Math.random() * 256); 
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 function handleMouseOver(event) {
     const cell = event.target;
-    const randomColor = getRandomColor(); // Отримання випадкового кольору
-    cell.style.backgroundColor = randomColor; // Застосування випадкового кольору до клітинки
+    const randomColor = getRandomColor();
+    cell.style.backgroundColor = randomColor; 
 }
 
 cells.forEach((cell) => {
     cell.addEventListener('click', handleClick);
     cell.addEventListener('dblclick', handleDoubleClick);
-    cell.addEventListener('mouseover', handleMouseOver); // Додавання обробника подій для наведення миші
+    cell.addEventListener('mouseover', handleMouseOver); 
 });
