@@ -57,21 +57,9 @@ function handleDoubleClick(event) {
     }
 }
 
-function getRandomColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256); 
-    const b = Math.floor(Math.random() * 256); 
-    return `rgb(${r}, ${g}, ${b})`;
-}
 
-function handleMouseOver(event) {
-    const cell = event.target;
-    const randomColor = getRandomColor();
-    cell.style.backgroundColor = randomColor; 
-}
-
+const cells = table.querySelectorAll('td');
 cells.forEach((cell) => {
     cell.addEventListener('click', handleClick);
     cell.addEventListener('dblclick', handleDoubleClick);
-    cell.addEventListener('mouseover', handleMouseOver); 
 });
